@@ -52,7 +52,7 @@ namespace QueryWeather.Controllers
                             break;
                     }
                 }
-                if (x.IntentParameterName.Equals("sys.date"))
+                if (x.IntentParameterName.Equals("sys.date(公共实体)"))
                 {
                     _dateStr = x.StandardValue;
                     switch (x.StandardValue)
