@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace QueryWeather.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("skill/weather")]
     [ApiController]
     public class WeatherForecastController : ControllerBase
     {
