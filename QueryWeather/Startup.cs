@@ -37,6 +37,12 @@ namespace QueryWeather
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "QueryWeather v1"));
             }
 
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "aligenie")), 
+                RequestPath = "/aligenie"
+            });
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
